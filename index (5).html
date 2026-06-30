@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BIC Social Dashboard</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.47.0/iconfont/tabler-icons.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand">
+    <span class="dot"></span>
+    <span>Breaking Invisible Ceilings</span>
+  </div>
+  <div class="tabs">
+    <button class="tabbtn active" data-tab="overview">Overview</button>
+    <button class="tabbtn" data-tab="entry">Add data</button>
+  </div>
+</div>
+
+<main>
+
+  <section id="view-overview">
+    <div class="quad-grid" id="quad-grid"></div>
+    <div class="toolbar-row">
+      <button id="export-btn" class="ghost-btn"><i class="ti ti-download"></i> Export data (JSON)</button>
+      <button id="import-btn" class="ghost-btn"><i class="ti ti-upload"></i> Import data</button>
+      <input type="file" id="import-file" accept="application/json" style="display:none;">
+      <button id="reset-btn" class="ghost-btn danger"><i class="ti ti-trash"></i> Reset all data</button>
+    </div>
+  </section>
+
+  <section id="view-entry" style="display:none;">
+    <div class="card form-card">
+      <div class="form-row">
+        <label>Platform</label>
+        <select id="platform-select">
+          <option value="tiktok">TikTok</option>
+          <option value="instagram">Instagram</option>
+          <option value="linkedin">LinkedIn</option>
+          <option value="youtube">YouTube</option>
+        </select>
+      </div>
+
+      <div class="tabs" style="margin-bottom:1rem;">
+        <button class="tabbtn active" data-mode="weekly" style="flex:1;">Weekly snapshot</button>
+        <button class="tabbtn" data-mode="post" style="flex:1;">Top post</button>
+      </div>
+
+      <div id="weekly-form">
+        <div class="form-row">
+          <label>Date</label>
+          <input type="date" id="w-date">
+        </div>
+        <div class="form-row">
+          <label id="w-followers-label">Followers</label>
+          <input type="number" id="w-followers" placeholder="e.g. 4820">
+        </div>
+        <div class="form-row">
+          <label>Views (this period)</label>
+          <input type="number" id="w-views" placeholder="e.g. 12400">
+        </div>
+        <div class="form-row">
+          <label>Engagements (likes + comments + shares)</label>
+          <input type="number" id="w-engagements" placeholder="e.g. 980">
+        </div>
+        <button id="save-weekly" class="primary-btn">Save weekly snapshot</button>
+      </div>
+
+      <div id="post-form" style="display:none;">
+        <div class="form-row">
+          <label>Date posted</label>
+          <input type="date" id="p-date">
+        </div>
+        <div class="form-row">
+          <label>Title or hook</label>
+          <input type="text" id="p-title" placeholder="e.g. Leadership Is a Climate">
+        </div>
+        <div class="form-row">
+          <label>Views</label>
+          <input type="number" id="p-views" placeholder="e.g. 18200">
+        </div>
+        <div class="form-row">
+          <label>Likes</label>
+          <input type="number" id="p-likes" placeholder="e.g. 740">
+        </div>
+        <div class="form-row">
+          <label>Comments</label>
+          <input type="number" id="p-comments" placeholder="e.g. 56">
+        </div>
+        <div class="form-row">
+          <label>Shares</label>
+          <input type="number" id="p-shares" placeholder="e.g. 22">
+        </div>
+        <button id="save-post" class="primary-btn">Save top post</button>
+      </div>
+
+      <p id="save-confirm" class="confirm-msg">Saved.</p>
+    </div>
+
+    <div class="card" style="margin-top:1rem;">
+      <h3>Entry history</h3>
+      <p class="muted-note">Manage or delete past entries for the selected platform.</p>
+      <div id="history-list"></div>
+    </div>
+  </section>
+
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
