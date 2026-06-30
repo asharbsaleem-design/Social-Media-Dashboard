@@ -1,0 +1,30 @@
+{
+  "tiktok": {
+    "weekly": [
+      { "date": "2026-06-29", "followers": 1, "views": 1200, "engagements": 32 }
+    ],
+    "posts": []
+  },
+  "instagram": {
+    "weekly": [
+      { "date": "2026-06-29", "followers": 1200, "views": 8279, "engagements": 551 }
+    ],
+    "posts": [
+      { "date": "2026-06-23", "title": "Rating self improvement books out of 10", "views": 2600, "likes": 0, "comments": 0, "shares": 0 }
+    ]
+  },
+  "linkedin": {
+    "weekly": [],
+    "posts": []
+  },
+  "youtube": {
+    "weekly": [
+      { "date": "2026-06-29", "followers": 111, "views": 39260, "engagements": 739 }
+    ],
+    "posts": [
+      { "date": "2026-06-29", "title": "The ceiling was...", "views": 20, "likes": 0, "comments": 0, "shares": 0 },
+      { "date": "2026-06-29", "title": "Leadership is a...", "views": 12, "likes": 0, "comments": 0, "shares": 0 },
+      { "date": "2026-06-29", "title": "You're Still Waitin...", "views": 4, "likes": 0, "comments": 0, "shares": 0 }
+    ]
+  }
+}
